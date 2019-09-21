@@ -75,6 +75,7 @@ class _MyHomePageState extends State<AppPage>
         icon: tabData[i]['icon'],
         title: Text(
           tabData[i]['text'],
+          style: TextStyle(color: Colors.red),
         ),
       ));
     }
@@ -146,6 +147,8 @@ class _MyHomePageState extends State<AppPage>
       ),
       bottomNavigationBar: BottomNavigationBar(
         items: _myTabs,
+//        unselectedItemColor: Colors.cyanAccent,
+//        backgroundColor: Colors.redAccent,
         //高亮  被点击高亮
         currentIndex: _currentIndex,
         //修改 页面
@@ -154,7 +157,8 @@ class _MyHomePageState extends State<AppPage>
         //fixed：固定
         type: BottomNavigationBarType.fixed,
 
-        fixedColor: Theme.of(context).primaryColor,
+        // selectedItemColor: Colors.amberAccent, // 不能与fixedColor 同时存在
+        fixedColor: Colors.blue,
       ),
     );
   }

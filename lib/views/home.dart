@@ -139,7 +139,7 @@ class _MyHomePageState extends State<AppPage>
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
-      appBar: renderAppBar(context, widget, _currentIndex),
+      appBar: renderAppBar(context, widget, _currentIndex), // 顶部的搜索框，只有在Widget标签页下才显示
       body: IndexedStack(
         index: _currentIndex,
         children: _list,
